@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Dashboard</title>
+    <link
+            href="https://fonts.googleapis.com/css?family=DM+Sans"
+            rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="/styles/dashboard.css" rel="stylesheet">
+
+</head>
+
+<body>
+<div class="topnav">
+    <a class="a" href="/">Home</a>
+    <a class="a" href="/about">About</a>
+    <div class="topnav-right"><a class="prof-img" href="sign-in">Profile</a></div>
+</div>
+<img src="meals.png"/>
+<div id="analytics">
+    <div class="analytics-item">
+        <h2 class="analytics-text">Breakfast</h2>
+        <p class="analytics-text" id="breakfast-count">{{headcount.breakfast}}</p>
+
+    </div>
+    <div class="analytics-item">
+        <h2 class="analytics-text">Lunch</h2>
+        <p class="analytics-text" id="lunch-count">{{headcount.lunch}}</p>
+    </div>
+    <div class="analytics-item">
+        <h2 class="analytics-text">Snacks</h2>
+        <p class="analytics-text" id="snacks-count">{{headcount.snacks}}</p>
+    </div>
+    <div class="analytics-item">
+        <h2 class="analytics-text">Dinner</h2>
+        <p class="analytics-text" id="dinner-count">{{headcount.dinner}}</p>
+    </div>
+</div>
+<div>
+    <button id="recipes" onclick="">Recipes</button>
+    <br/><br/>
+
+    <button id="logout-btn" onclick="signout()">Log out</button>
+</div>
+<div class="modal" id="recipeInfo">
+    <div class="modal-content ">
+        <span class="close">&times;</span>
+        <form id="recipe-menu" method="POST">
+            <p class="recipe-time">BreakFast</p>
+            <input
+                    class="recipe-breakfast"
+                    name="recipe-breakfast"
+                    type="text"
+                    value="{{recipes.breakfast}}"
+            />
+            <p class="recipe-time">Lunch</p>
+            <input
+                    class="recipe-lunch"
+                    name="recipe-lunch"
+                    type="text"
+                    value="{{recipes.lunch}}"
+            />
+            <p class="recipe-time">Snacks</p>
+            <input
+                    class="recipe-snacks"
+                    name="recipe-snacks"
+                    type="text"
+                    value="{{recipes.snacks}}"
+            />
+            <p class="recipe-time">Dinner</p>
+            <input
+                    class="recipe-dinner"
+                    name="recipe-dinner"
+                    type="text"
+                    value="{{recipes.dinner}}"
+            />
+            <button class="recipe-update" onclick="recipeUpdater()" type="submit">
+                Update Recipes
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="bottomfoobar"><p style="color: white; font-size: 11px;">M.E.A.L.S.(Meal Efficiency & Automated
+    Logistics System)</p></div>
+<script src="/scripts/dashboard.js"></script>
+</body>
+</html>

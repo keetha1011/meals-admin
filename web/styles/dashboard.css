@@ -1,0 +1,213 @@
+@keyframes sign_in_box {
+  0%   {background-color: rgba(255,255,255,0.5); scale:0.7;}
+  100% {background-color: rgba(255,255,255,1); scale:1.0;}
+}
+
+
+
+
+body {
+  font-family: "DM Sans";
+  margin: auto;
+  padding: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(
+    180deg,
+    rgb(255, 0, 0),
+    rgb(85, 1, 1)
+  );
+}
+
+.container {
+  width: 500px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-left: 0;
+  font-size: 46px;
+}
+
+.analytics {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  color: white;
+}
+
+.analytics-text {
+  color: white;
+  text-shadow: 2px 1px 2px black;
+}
+
+.analytics div {
+  flex: 1;
+  background-color: #e5e5e5;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.analytics div:last-child {
+  margin-right: 0;
+}
+
+.analytics div h2 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.analytics div p {
+  margin: 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  text-shadow: 1px 1px 1px rgb(117, 117, 117);
+}
+
+.modal-content {
+  background-color: #ddd;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  width: 60%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  background-color: white;
+  border: none;
+  z-index: 3;
+  border-radius: 8px;
+  height: 50px;
+  width: 100px;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgb(117, 117, 117);
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.recipe-time {
+  font-size: 25px;
+}
+
+button {
+  margin: auto;
+  padding: auto;
+  position: center;
+  font-family: "DM Sans";
+}
+
+.recipe-update {
+  margin-top: 15px;
+  width: auto;
+  background-color: rgba(255, 0, 0, 0.33);
+  font-size: 20px;
+}
+
+.recipe-update:hover {
+  background-color: rgba(155, 0, 0, 0.33);
+}
+
+.recipe-breakfast,
+.recipe-dinner,
+.recipe-snacks,
+.recipe-lunch {
+  height: 40px;
+  width: 90%;
+  font-family: "DM Sans";
+  font-size: 20px;
+  border-color: rgba(255, 0, 0, 0.363);
+  border-radius: 8px;
+}
+
+.topnav {
+  z-index: 2;
+  overflow: hidden;
+  background-color: #ddd;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.topnav .a {
+  float: left;
+  color: red;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav .a:hover {
+  background-color: #bbb;
+  color: rgb(200,0,0);
+}
+
+.topnav-right {
+  float: right;
+  padding-right: 2px;
+  background-image: linear-gradient(0deg, #f10000, rgb(195, 0, 0));
+  color: white;
+  text-align: center;
+  padding: 0 0;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.prof-img {
+    color: white;
+    padding: 14px 16px;
+    float: right;
+    text-decoration: none;
+}
+
+.bottomfoobar {
+overflow: hidden;
+bottom: 0;
+position: fixed;
+}
+
+input {
+    background-color: rgba(233, 140, 140, 0.4);
+    border:none;
+    padding: 5px;
+    color: black;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+

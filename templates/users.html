@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Users</title>
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans" rel="stylesheet"/>
+    <link href="/styles/users.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="topnav">
+    <a class="a" href="/">Home</a>
+    <a class="a" href="/about">About</a>
+    <div class="topnav-right"><a class="prof-img" href="sign-in">Profile</a></div>
+</div>
+
+
+<div class="top_body">
+    <p>Users</p>
+    <button>Add User</button>
+    <form method="post">
+    <ul>
+        {% for email in users_email_dict.email %}
+        <li class="list-group-item"><a href="/users/{{email[:-10]}}">{{email}}</a></li>
+        {% endfor %}
+    </ul>
+    </form>
+    <div class="main_body">
+        <p>body</p>
+        <span class="user_list"></span>
+    </div>
+</div>
+
+
+
+<div class="bottomfoobar"><p style="color: white; font-size: 11px;">M.E.A.L.S.(Meal Efficiency & Automated
+    Logistics System)</p></div>
+<input type="text" value="{{users_email_dict.email}}"></input>
+</body>
+</html>
