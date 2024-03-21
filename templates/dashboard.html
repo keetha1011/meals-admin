@@ -23,20 +23,20 @@
 <div id="analytics">
     <div class="analytics-item">
         <h2 class="analytics-text">Breakfast</h2>
-        <p class="analytics-text" id="breakfast-count">{{headcount.breakfast}}</p>
+        <p class="analytics-text" id="breakfast-count">{{attendance.breakfast}} / {{choices.breakfast}}</p>
 
     </div>
     <div class="analytics-item">
         <h2 class="analytics-text">Lunch</h2>
-        <p class="analytics-text" id="lunch-count">{{headcount.lunch}}</p>
+        <p class="analytics-text" id="lunch-count">{{attendance.lunch}} / {{choices.lunch}}</p>
     </div>
     <div class="analytics-item">
         <h2 class="analytics-text">Snacks</h2>
-        <p class="analytics-text" id="snacks-count">{{headcount.snacks}}</p>
+        <p class="analytics-text" id="snacks-count">{{attendance.snacks}} / {{choices.snacks}}</p>
     </div>
     <div class="analytics-item">
         <h2 class="analytics-text">Dinner</h2>
-        <p class="analytics-text" id="dinner-count">{{headcount.dinner}}</p>
+        <p class="analytics-text" id="dinner-count">{{attendance.dinner}} / {{choices.dinner}}</p>
     </div>
 </div>
 <div>
@@ -84,8 +84,10 @@
     </div>
 </div>
 
-<div class="bottomfoobar"><p style="color: white; font-size: 11px;">M.E.A.L.S.(Meal Efficiency & Automated
-    Logistics System)</p></div>
+<div class="bottomfoobar">
+    <p style="color: white; font-size: 11px;">Total Students registed in Hostel Mess: {{totals.total}}</p>
+    <p style="color: white; font-size: 11px;">M.E.A.L.S.(Meal Efficiency & Automated
+    Logistics System)</p></div>
 <script src="/scripts/dashboard.js"></script>
 </body>
 </html>
