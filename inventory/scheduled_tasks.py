@@ -19,7 +19,6 @@ def scheduled_task_meal_analytics(which_meal, db):
 
         if data[f"{which_meal}"]:
             choice_count += 1
-    print(choice_count)
     db.collection("count").document("3XAuDDcCBxPjeLnoJDZ5").set({f"{which_meal}": choice_count}, merge=True)
 
     if which_meal == "dinner":
@@ -36,7 +35,7 @@ def scheduled_task_meal_analytics(which_meal, db):
 
         if data[f"{which_meal}"]:
             attendance_count += 1
-    print(attendance_count)
+    db.collection("counts").document("ocqraJyO161eUcBnEDTa").set({f"{which_meal}": attendance_count}, merge=True)
 
 
 
