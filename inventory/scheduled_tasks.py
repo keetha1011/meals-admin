@@ -14,11 +14,13 @@ def scheduled_task_meal_analytics(which_meal, db):
     choice_docs = choice_collection_ref.stream()
 
     choice_count = 0
+    total_count = 0
     for doc in choice_docs:
         data = doc.to_dict()
 
         if data[f"{which_meal}"]:
             choice_count += 1
+            total_count += 1
     db.collection("count").document("3XAuDDcCBxPjeLnoJDZ5").set({f"{which_meal}": choice_count}, merge=True)
 
     if which_meal == "dinner":
@@ -36,8 +38,7 @@ def scheduled_task_meal_analytics(which_meal, db):
         if data[f"{which_meal}"]:
             attendance_count += 1
     db.collection("counts").document("ocqraJyO161eUcBnEDTa").set({f"{which_meal}": attendance_count}, merge=True)
-
-
+    db.collction("counts").document("AmMJEJd4Dx7n9zEwOFiQ").set({f"headcount":total_count}, merge=True)
 
 
 def scheduled_task_daily(db):
