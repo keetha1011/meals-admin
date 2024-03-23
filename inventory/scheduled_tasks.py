@@ -38,7 +38,7 @@ def scheduled_task_meal_analytics(which_meal, db):
         if data[f"{which_meal}"]:
             attendance_count += 1
     db.collection("counts").document("ocqraJyO161eUcBnEDTa").set({f"{which_meal}": attendance_count}, merge=True)
-    db.collction("counts").document("AmMJEJd4Dx7n9zEwOFiQ").set({f"headcount":total_count}, merge=True)
+    db.collection("counts").document("AmMJEJd4Dx7n9zEwOFiQ").set({f"headcount":total_count}, merge=True)
 
 
 def scheduled_task_daily(db):

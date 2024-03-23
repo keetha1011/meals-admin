@@ -154,7 +154,7 @@ def about_css():
 if __name__ == '__main__':
     app.secret_key = os.environ.get('FLASK_SECRET_KEY', 'The_most_scret_key_ever_made_in_the_namkind')
     scheduler.add_job(func=inventory.scheduled_tasks.scheduled_task_meal_analytics, args=["breakfast", db],
-                      trigger="cron", hour="0-5", minute="15-45", jitter=120)
+                      trigger="cron", hour="0-9", minute="15-45", jitter=120)
     scheduler.add_job(func=inventory.scheduled_tasks.scheduled_task_meal_analytics, args=["lunch", db], trigger="cron",
                       hour="3-12", minute="15-45", jitter=121)
     scheduler.add_job(func=inventory.scheduled_tasks.scheduled_task_meal_analytics, args=["snacks", db], trigger="cron",
